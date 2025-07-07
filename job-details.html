@@ -1,0 +1,112 @@
+<!-- job-details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Details – CareerHunt</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Detailed view of job openings at CareerHunt. View responsibilities, requirements, and apply now." />
+  <meta name="keywords" content="job, frontend developer, UI, job details, apply" />
+  <meta name="author" content="Subhajit Das" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed w-full z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-700">CareerHunt</h1>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-blue-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+      <ul class="hidden md:flex space-x-6 font-medium text-gray-800">
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="jobs.html" class="hover:text-blue-600">Browse Jobs</a></li>
+        <li><a href="upload.html" class="hover:text-blue-600">Upload Resume</a></li>
+        <li><a href="post-job.html" class="hover:text-blue-600">Post Job</a></li>
+        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+      <ul class="hidden md:flex space-x-6 font-medium text-indigo-700">
+        <!-- existing links -->
+        <li><a href="sign-in.html" class="hover:text-indigo-900">Sign In</a></li>
+        <li><a href="sign-up.html" class="hover:text-indigo-900">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white shadow-md">
+      <a href="index.html" class="block py-3 border-b text-gray-800 font-medium hover:text-indigo-600">Home</a>
+      <a href="jobs.html" class="block py-3 border-b text-gray-800 font-medium hover:text-indigo-600">Browse Jobs</a>
+      <a href="upload.html" class="block py-3 border-b text-gray-800 font-medium hover:text-indigo-600">Upload Resume</a>
+      <a href="post-job.html" class="block py-3 border-b text-gray-800 font-medium hover:text-indigo-600">Post Job</a>
+      <a href="about.html" class="block py-3 border-b text-gray-800 font-medium hover:text-indigo-600">About</a>
+      <a href="contact.html" class="block py-3 border-b text-gray-800 font-medium hover:text-indigo-600">Contact</a>
+
+      <!-- Stylish Auth Buttons -->
+      <div class="mt-4 flex flex-col gap-2">
+        <a href="sign-in.html" class="block text-center px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 font-semibold">Sign In</a>
+        <a href="sign-up.html" class="block text-center px-4 py-2 border border-indigo-600 text-indigo-600 rounded hover:bg-indigo-100 font-semibold">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Job Details -->
+  <main class="max-w-4xl mx-auto px-4 py-32">
+    <img src="images/company.webp" alt="Company Office" class="rounded-lg shadow mb-8 max-h-[300px] mx-auto" />
+
+    <div class="bg-white p-6 rounded shadow-md">
+      <h2 class="text-2xl font-bold text-blue-700 mb-2">Frontend Developer</h2>
+      <p class="text-sm text-gray-600 mb-4">Company: <strong>PixelTech Pvt. Ltd.</strong> | Location: <strong>Bengaluru, India</strong></p>
+      <p><strong>Experience:</strong> 1–3 years</p>
+      <p><strong>Salary:</strong> ₹4–6 LPA</p>
+
+      <div class="mt-4">
+        <h3 class="font-semibold text-lg mb-2">Job Description:</h3>
+        <p>We’re looking for a talented frontend developer to join our team. You’ll work on creating intuitive user interfaces using HTML, CSS, and JavaScript frameworks like React.</p>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="font-semibold text-lg mb-2">Requirements:</h3>
+        <ul class="list-disc ml-6 space-y-1">
+          <li>Proficient in HTML5, CSS3, JavaScript</li>
+          <li>Experience with React.js is a plus</li>
+          <li>Good understanding of responsive design</li>
+          <li>Strong communication skills</li>
+        </ul>
+      </div>
+
+      <div class="mt-6">
+        <a href="upload.html">
+          <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Apply Now</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+    &copy; 2025 CareerHunt. All rights reserved.
+  </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>

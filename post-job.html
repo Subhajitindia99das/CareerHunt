@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Job – CareerHunt</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Post a job on CareerHunt and reach top candidates across India." />
+  <meta name="keywords" content="post job, hire, employer, job portal" />
+  <meta name="author" content="Subhajit Das" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.3s ease-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-700">CareerHunt</h1>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-4 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="jobs.html" class="hover:text-blue-600">Browse Jobs</a></li>
+        <li><a href="post-job.html" class="text-blue-700 font-bold">Post Job</a></li>
+        <li><a href="upload.html" class="hover:text-blue-600">Upload Resume</a></li>
+        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+      <ul class="hidden md:flex space-x-6 font-medium text-indigo-700">
+        <!-- existing links -->
+        <li><a href="sign-in.html" class="hover:text-indigo-900">Sign In</a></li>
+        <li><a href="sign-up.html" class="hover:text-indigo-900">Sign Up</a></li>
+      </ul>
+
+      <!-- Hamburger Icon -->
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navbar Section -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white shadow-md">
+      <a href="index.html" class="block py-3 border-b border-gray-200 text-gray-800 font-medium hover:text-indigo-600">Home</a>
+      <a href="jobs.html" class="block py-3 border-b border-gray-200 text-gray-800 font-medium hover:text-indigo-600">Browse Jobs</a>
+      <a href="upload.html" class="block py-3 border-b border-gray-200 text-gray-800 font-medium hover:text-indigo-600">Upload Resume</a>
+      <a href="post-job.html" class="block py-3 border-b border-gray-200 text-gray-800 font-medium hover:text-indigo-600">Post Job</a>
+      <a href="about.html" class="block py-3 border-b border-gray-200 text-gray-800 font-medium hover:text-indigo-600">About</a>
+      <a href="contact.html" class="block py-3 border-b border-gray-200 text-gray-800 font-medium hover:text-indigo-600">Contact</a>
+
+      <!-- Stylish Auth Buttons -->
+      <div class="mt-4 flex flex-col gap-2">
+        <a href="sign-in.html" class="block text-center px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 font-semibold">Sign In</a>
+        <a href="sign-up.html" class="block text-center px-4 py-2 border border-indigo-600 text-indigo-600 rounded hover:bg-indigo-100 font-semibold">Sign Up</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Post Job Section -->
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold text-center mb-8">Post a New Job</h2>
+
+    <!-- Placeholder Image -->
+    <img src="images/postjob.jpg" alt="Post Job" class="rounded-lg shadow mb-8 mx-auto max-h-[300px]" />
+
+    <form class="bg-white p-6 rounded shadow space-y-4">
+      <div>
+        <label for="company" class="block font-semibold mb-1">Company Name:</label>
+        <input type="text" id="company" placeholder="e.g. PixelTech Pvt. Ltd." required
+          class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="title" class="block font-semibold mb-1">Job Title:</label>
+        <input type="text" id="title" placeholder="e.g. Frontend Developer" required
+          class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="location" class="block font-semibold mb-1">Location:</label>
+        <input type="text" id="location" placeholder="e.g. Bengaluru, India" required
+          class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="salary" class="block font-semibold mb-1">Salary (Optional):</label>
+        <input type="text" id="salary" placeholder="e.g. ₹4–6 LPA"
+          class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="description" class="block font-semibold mb-1">Job Description:</label>
+        <textarea id="description" rows="4" placeholder="Describe job responsibilities..." required
+          class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <div>
+        <label for="requirements" class="block font-semibold mb-1">Requirements:</label>
+        <textarea id="requirements" rows="4" placeholder="List required skills and qualifications..." required
+          class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded font-semibold hover:bg-blue-700">
+        Submit Job
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+    &copy; 2025 CareerHunt. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('animate-fade-in');
+    });
+  </script>
+</body>
+</html>
