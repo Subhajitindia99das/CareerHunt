@@ -62,6 +62,7 @@ CareerHunt/
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
+├── .gitignore
 └── README.md               <-- With setup + project info
 ```
 
@@ -80,11 +81,16 @@ CareerHunt/
    ```bash
     npm install
 
+3. **Tailwind CLI setup:**
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+
 4. **Start Tailwind watcher to build CSS**
    ```bash
    npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
-6. **Open the project**
+5. **Open the project**
   - Just open `index.html` in your browser.
   - You can use Live Server in VS Code for smooth reloads.
    
