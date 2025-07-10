@@ -101,5 +101,4 @@ Made with ❤️ by Subhajit Das
 📍 B.Tech CSE Student, MSIT Kolkata
 
 ## 📄 License
-This project currently does not use any open-source license.
-All rights reserved by the author.
+This project is currently under **MIT license**.
